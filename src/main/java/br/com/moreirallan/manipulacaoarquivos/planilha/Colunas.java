@@ -1,0 +1,97 @@
+package br.com.moreirallan.manipulacaoarquivos.planilha;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Colunas {
+    public static final int A = 0;
+    public static final int B = 1;
+    public static final int C = 2;
+    public static final int D = 3;
+    public static final int E = 4;
+    public static final int F = 5;
+    public static final int G = 6;
+    public static final int H = 7;
+    public static final int I = 8;
+    public static final int J = 9;
+    public static final int K = 10;
+    public static final int L = 11;
+    public static final int M = 12;
+    public static final int N = 13;
+    public static final int O = 14;
+    public static final int P = 15;
+    public static final int Q = 16;
+    public static final int R = 17;
+    public static final int S = 18;
+    public static final int T = 19;
+    public static final int U = 20;
+    public static final int V = 21;
+    public static final int W = 22;
+    public static final int X = 23;
+    public static final int Y = 24;
+    public static final int Z = 25;
+    public static final int AA = 26;
+    public static final int AB = 27;
+    public static final int AC = 28;
+    public static final int AD = 29;
+    public static final int AE = 30;
+    public static final int AF = 31;
+    public static final int AG = 32;
+    public static final int AH = 33;
+    public static final int AI = 34;
+    public static final int AJ = 35;
+    public static final int AK = 36;
+    public static final int AL = 37;
+    public static final int AM = 38;
+    public static final int AN = 39;
+    public static final int AO = 40;
+    public static final int AP = 41;
+
+    public static String fromValue(int v) {
+        Map<Integer, String> map = new HashMap<>();
+        map.put(0, "A");
+        map.put(1, "B");
+        map.put(2, "C");
+        map.put(3, "D");
+        map.put(4, "E");
+        map.put(5, "F");
+        map.put(6, "G");
+        map.put(7, "H");
+        map.put(8, "I");
+        map.put(9, "J");
+        map.put(10, "K");
+        map.put(11, "L");
+        map.put(12, "M");
+        map.put(13, "N");
+        map.put(14, "O");
+        map.put(15, "P");
+        map.put(16, "Q");
+        map.put(17, "R");
+        map.put(18, "S");
+        map.put(19, "T");
+        map.put(20, "U");
+        map.put(21, "V");
+        map.put(22, "W");
+        map.put(23, "X");
+        map.put(24, "Y");
+        map.put(25, "Z");
+        map.put(26, "AA");
+        map.put(27, "AB");
+        map.put(28, "AC");
+        map.put(29, "AD");
+        map.put(30, "AE");
+        map.put(31, "AF");
+        map.put(32, "AG");
+        map.put(33, "AH");
+        map.put(34, "AI");
+        map.put(35, "AJ");
+        map.put(36, "AK");
+        map.put(37, "AL");
+        map.put(38, "AM");
+        map.put(39, "AN");
+        map.put(40, "AO");
+        map.put(41, "AP");
+
+        return map.get(v);
+    }
+}
