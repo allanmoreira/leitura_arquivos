@@ -20,10 +20,23 @@ public class LeituraGravacaoArquivoTest {
     }
 
     @org.junit.Test
-    public void testLer() throws Exception {
+    public void testLer1() throws Exception {
         List<String> strings = leituraGravacaoArquivo.ler(CaminhoConstants.Arquivo.CAMINHO + CaminhoConstants.Arquivo.TESTE_1);
 
         System.out.println(strings.size());
         System.out.println(strings.toString());
+    }
+
+    @org.junit.Test
+    public void testLer2() throws Exception {
+        List<String> strings = leituraGravacaoArquivo.ler(CaminhoConstants.Arquivo.CAMINHO + CaminhoConstants.Arquivo.TESTE_2);
+
+        System.out.println(strings.size());
+        System.out.println(strings.toString());
+    }
+
+    @org.junit.Test
+    public void testNovo() throws Exception {
+        leituraGravacaoArquivo.novo(CaminhoConstants.Arquivo.CAMINHO + CaminhoConstants.Arquivo.TESTE_3);
     }
 }

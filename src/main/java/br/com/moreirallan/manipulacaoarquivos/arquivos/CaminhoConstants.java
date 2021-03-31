@@ -6,6 +6,7 @@ public class CaminhoConstants {
         public static final String CAMINHO = "src/arquivos/arquivos/";
         public static final String TESTE_1 = "teste1.txt";
         public static final String TESTE_2 = "teste_2.txt";
+        public static final String TESTE_3 = "teste_3.txt";
     }
 
     public static class Planilha {
