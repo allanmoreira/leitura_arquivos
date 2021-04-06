@@ -17,6 +17,8 @@ public class CSVUtilsTest {
     public void toCSVTest() {
         csvUtils = new CSVUtils();
 
+        String[] headers = {"NOME", "SOBRENOME"};
+
         List<DadosCsv> listaDadosObjeto = new ArrayList<>();
         listaDadosObjeto.add(new DadosCsv("Allan", "Moreira"));
         listaDadosObjeto.add(new DadosCsv("Jéssica", "Freitas"));
@@ -27,7 +29,7 @@ public class CSVUtilsTest {
             dados.add(Arrays.asList(dadosObjeto.getNome(), dadosObjeto.getSobrenome()));
         }
 
-        byte[] bytes = csvUtils.toCSV(dados);
+        byte[] bytes = csvUtils.toCSV(dados, headers);
         String base64 = Base64Utils.codificaArquivoParaBase64(bytes);
         System.out.println(base64);
     }

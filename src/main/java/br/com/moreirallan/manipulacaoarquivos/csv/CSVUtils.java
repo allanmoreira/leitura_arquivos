@@ -11,8 +11,8 @@ import java.util.List;
 
 public class CSVUtils {
 
-    public byte[] toCSV(List<List<String>> dados) {
-        final CSVFormat format = CSVFormat.DEFAULT.withQuoteMode(QuoteMode.MINIMAL);
+    public byte[] toCSV(List<List<String>> dados, String[] headers) {
+        final CSVFormat format = CSVFormat.RFC4180.withHeader(headers).withQuoteMode(QuoteMode.MINIMAL);
 
         try (
                 ByteArrayOutputStream out = new ByteArrayOutputStream();
@@ -20,8 +20,8 @@ public class CSVUtils {
              ) {
             for (List<String> linha : dados) {
                 csvPrinter.printRecord(linha);
-                csvPrinter.flush();
             }
+            csvPrinter.flush();
             return out.toByteArray();
         } catch (IOException e) {
             throw new RuntimeException("fail to import data to CSV file: " + e.getMessage());
