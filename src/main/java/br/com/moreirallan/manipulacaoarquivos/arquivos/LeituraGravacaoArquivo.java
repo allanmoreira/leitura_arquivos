@@ -21,10 +21,8 @@ public class LeituraGravacaoArquivo {
      * Gera randomicamente 100 numeros inteiros entre 0 e 100, e grava estes
      * números em um arquivo texto separados por “,”. O nome do arquivo e
      * passado por parametro
-     *
-     * @return true se a gravacao foi feita com sucesso e false caso contrario.
      */
-    public boolean novo(String nomeArq) {
+    public void novo(String nomeArq) {
         try {
             // Abre o arquivo
             FileWriter f = new FileWriter(nomeArq);
@@ -43,9 +41,8 @@ public class LeituraGravacaoArquivo {
                 f.close();
             }
         } catch (IOException e) {
-            return false;
+            e.printStackTrace();
         }
-        return true;
     }
 
     /**
@@ -116,7 +113,7 @@ public class LeituraGravacaoArquivo {
                 f.close();
             }
         } catch (IOException e) {
-            return null;
+            e.printStackTrace();
         }
 
         return listaQueries;
