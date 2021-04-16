@@ -11,11 +11,9 @@ import java.util.List;
 
 public class CSVUtilsTest {
 
-    private CSVUtils csvUtils;
-
     @Test
     public void toCSVTest() {
-        csvUtils = new CSVUtils();
+        CSVUtils csvUtils = new CSVUtils();
 
         String[] headers = {"NOME", "SOBRENOME"};
 
@@ -30,7 +28,7 @@ public class CSVUtilsTest {
         }
 
         byte[] bytes = csvUtils.toCSV(dados, headers);
-        String base64 = Base64Utils.codificaArquivoParaBase64(bytes);
+        String base64 = Base64Utils.toBase64(bytes);
         System.out.println(base64);
     }
 }
