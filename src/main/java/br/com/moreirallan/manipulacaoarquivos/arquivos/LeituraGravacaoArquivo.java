@@ -10,12 +10,20 @@ package br.com.moreirallan.manipulacaoarquivos.arquivos;
  * @author Allan Moreira
  */
 
+import br.com.moreirallan.manipulacaoarquivos.service.FileInfoService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+@Service
 public class LeituraGravacaoArquivo {
+
+    @Autowired
+    private FileInfoService fileInfoService;
 
     /**
      * Gera randomicamente 100 numeros inteiros entre 0 e 100, e grava estes
@@ -53,8 +61,7 @@ public class LeituraGravacaoArquivo {
      * @param novaPalavra palavra a ser substituída pela pesquisada
      */
     public void  editar(String caminhoCompletoArquivo, String palavraAntiga, String novaPalavra) {
-        FileInfo fileInfo = new FileInfo(new File(caminhoCompletoArquivo));
-        String diretorioArquivo = fileInfo.getCaminhoArquivo();
+        String diretorioArquivo = fileInfoService.dadosArquivo(new File(caminhoCompletoArquivo)).getCaminhoArquivo();
         List<String> lines = new ArrayList<>();
         String line;
 
