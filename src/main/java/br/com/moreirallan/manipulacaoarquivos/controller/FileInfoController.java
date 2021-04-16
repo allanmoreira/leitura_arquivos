@@ -18,13 +18,8 @@ public class FileInfoController {
     @Autowired
     private FileInfoService fileInfoService;
 
-    @RequestMapping(path = "teste", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @RequestMapping(method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public Object lista(@RequestParam(name = "arquivo", required = false) String arquivo){
-        File file;
-        if(arquivo == null)
-            file = new File(CaminhoConstants.Arquivo.CAMINHO + CaminhoConstants.Arquivo.TESTE_1);
-        else
-            file = new File(arquivo);
-        return fileInfoService.dadosArquivo(file);
+        return fileInfoService.dadosArquivo(new File(arquivo));
     }
 }

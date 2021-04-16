@@ -1,4 +1,4 @@
-package br.com.moreirallan.manipulacaoarquivos.arquivos;
+package br.com.moreirallan.manipulacaoarquivos.model;
 
 public class FileInfoResponse {
     private String nomeArquivo;

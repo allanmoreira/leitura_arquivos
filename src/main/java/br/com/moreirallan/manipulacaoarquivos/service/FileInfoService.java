@@ -1,6 +1,6 @@
 package br.com.moreirallan.manipulacaoarquivos.service;
 
-import br.com.moreirallan.manipulacaoarquivos.arquivos.FileInfoResponse;
+import br.com.moreirallan.manipulacaoarquivos.model.FileInfoResponse;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
