@@ -1,6 +1,5 @@
 package br.com.moreirallan.manipulacaoarquivos.controller;
 
-import br.com.moreirallan.manipulacaoarquivos.arquivos.CaminhoConstants;
 import br.com.moreirallan.manipulacaoarquivos.service.FileInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
