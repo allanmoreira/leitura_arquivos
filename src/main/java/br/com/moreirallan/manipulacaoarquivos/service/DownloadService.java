@@ -34,12 +34,7 @@ public class DownloadService {
 
             MediaType mediaType = arquivoUtils.getMediaType(servletContext, arquivo);
 
-            ByteArrayResource inputStreamSource = new ByteArrayResource(bytesArray);
-            return ResponseEntity.ok()
-                    .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=" + file.getName())
-                    .contentType(mediaType)
-                    .contentLength(file.length())
-                    .body(inputStreamSource);
+            return downloadAux(bytesArray, mediaType, file.getName());
         } catch (RuntimeException | IOException | Error ex) {
             throw new Exception(ex.getMessage());
         }
@@ -59,11 +54,14 @@ public class DownloadService {
         } catch (RuntimeException | MimeTypeException ex) {
             // gerar log
         }
-        ByteArrayResource inputStreamSource = new ByteArrayResource(bytes);
-        return ResponseEntity.ok()
-                .contentType(mediaType)
-                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + nomeArquivo + "\"")
-                .body(inputStreamSource);
+        return downloadAux(bytes, mediaType, nomeArquivo);
     }
 
+    private ResponseEntity<ByteArrayResource> downloadAux(byte[] bytes, MediaType mediaType, String nomeArquivo){
+        ByteArrayResource inputStreamSource = new ByteArrayResource(bytes);
+        return ResponseEntity.ok()
+                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=" + nomeArquivo)
+                .contentType(mediaType)
+                .body(inputStreamSource);
+    }
 }

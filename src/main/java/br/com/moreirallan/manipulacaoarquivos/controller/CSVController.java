@@ -32,7 +32,7 @@ public class CSVController {
     }
 
     @RequestMapping(path = "to_csv/download", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public ResponseEntity<ByteArrayResource> download(@RequestBody CSVRequest request) {
+    public ResponseEntity<ByteArrayResource> toCsvDownload(@RequestBody CSVRequest request) {
         return downloadService.download(csvService.toCsv(request), "arquivo.csv");
     }
 }
