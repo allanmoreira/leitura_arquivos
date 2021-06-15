@@ -1,8 +1,8 @@
-package br.com.moreirallan.manipulacaoarquivos.arquivos;
+package br.com.moreirallan.manipulacaoarquivos.service.arquivos;
 
-import br.com.moreirallan.manipulacaoarquivos.base64.Base64Utils;
-import br.com.moreirallan.manipulacaoarquivos.csv.CSVUtils;
-import br.com.moreirallan.manipulacaoarquivos.csv.DadosCsv;
+import br.com.moreirallan.core.utils.Base64Utils;
+import br.com.moreirallan.core.utils.CSVUtils;
+import br.com.moreirallan.manipulacaoarquivos.model.DadosCsv;
 import org.junit.Test;
 
 import java.util.ArrayList;

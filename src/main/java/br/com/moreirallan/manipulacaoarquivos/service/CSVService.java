@@ -1,8 +1,7 @@
 package br.com.moreirallan.manipulacaoarquivos.service;
 
-import br.com.moreirallan.manipulacaoarquivos.base64.Base64Utils;
-import br.com.moreirallan.manipulacaoarquivos.csv.CSVUtils;
-import br.com.moreirallan.manipulacaoarquivos.csv.DadosCsv;
+import br.com.moreirallan.core.utils.CSVUtils;
+import br.com.moreirallan.manipulacaoarquivos.model.DadosCsv;
 import br.com.moreirallan.manipulacaoarquivos.model.CSVRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

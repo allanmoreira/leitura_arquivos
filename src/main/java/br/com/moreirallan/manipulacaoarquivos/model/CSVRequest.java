@@ -1,7 +1,5 @@
 package br.com.moreirallan.manipulacaoarquivos.model;
 
-import br.com.moreirallan.manipulacaoarquivos.csv.DadosCsv;
-
 import java.util.List;
 
 public class CSVRequest {

@@ -1,6 +1,6 @@
 package br.com.moreirallan.manipulacaoarquivos.service;
 
-import br.com.moreirallan.manipulacaoarquivos.utils.ArquivoUtils;
+import br.com.moreirallan.core.utils.ArquivoUtils;
 import org.apache.tika.Tika;
 import org.apache.tika.mime.MimeType;
 import org.apache.tika.mime.MimeTypeException;

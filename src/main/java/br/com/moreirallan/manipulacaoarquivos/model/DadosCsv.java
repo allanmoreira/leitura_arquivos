@@ -1,4 +1,4 @@
-package br.com.moreirallan.manipulacaoarquivos.csv;
+package br.com.moreirallan.manipulacaoarquivos.model;
 
 public class DadosCsv {
     private String nome;

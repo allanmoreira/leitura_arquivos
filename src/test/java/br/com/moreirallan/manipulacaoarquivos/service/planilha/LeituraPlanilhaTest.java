@@ -1,6 +1,6 @@
-package br.com.moreirallan.manipulacaoarquivos.planilha;
+package br.com.moreirallan.manipulacaoarquivos.service.planilha;
 
-import br.com.moreirallan.manipulacaoarquivos.arquivos.CaminhoConstants;
+import br.com.moreirallan.manipulacaoarquivos.service.arquivos.CaminhoConstants;
 import org.junit.Before;
 import org.junit.Test;
 

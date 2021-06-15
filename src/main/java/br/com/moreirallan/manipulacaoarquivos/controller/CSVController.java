@@ -1,6 +1,6 @@
 package br.com.moreirallan.manipulacaoarquivos.controller;
 
-import br.com.moreirallan.manipulacaoarquivos.base64.Base64Utils;
+import br.com.moreirallan.core.utils.Base64Utils;
 import br.com.moreirallan.manipulacaoarquivos.model.CSVRequest;
 import br.com.moreirallan.manipulacaoarquivos.service.CSVService;
 import br.com.moreirallan.manipulacaoarquivos.service.DownloadService;
@@ -13,14 +13,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.ServletContext;
-
 @RestController
 @RequestMapping("csv")
 public class CSVController {
 
-    @Autowired
-    private ServletContext servletContext;
     @Autowired
     private CSVService csvService;
     @Autowired

@@ -1,4 +1,4 @@
-package br.com.moreirallan.manipulacaoarquivos.arquivos;
+package br.com.moreirallan.manipulacaoarquivos.service.arquivos;
 
 public class CaminhoConstants {
 
