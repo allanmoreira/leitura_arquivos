@@ -10,8 +10,6 @@ package br.com.moreirallan.manipulacaoarquivos.service.arquivos;
  * @author Allan Moreira
  */
 
-import br.com.moreirallan.core.utils.ArquivoUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.io.*;
@@ -21,9 +19,6 @@ import java.util.Random;
 
 @Component
 public class LeituraGravacaoArquivo {
-
-    @Autowired
-    private ArquivoUtils arquivoUtils;
 
     /**
      * Gera randomicamente 100 numeros inteiros entre 0 e 100, e grava estes

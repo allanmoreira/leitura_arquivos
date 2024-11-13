@@ -1,7 +1,7 @@
 package br.com.moreirallan.manipulacaoarquivos.service;
 
-import br.com.moreirallan.manipulacaoarquivos.service.arquivos.LeituraGravacaoArquivo;
 import br.com.moreirallan.manipulacaoarquivos.model.LeituraPlanilhaResponse;
+import br.com.moreirallan.manipulacaoarquivos.service.arquivos.LeituraGravacaoArquivo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
