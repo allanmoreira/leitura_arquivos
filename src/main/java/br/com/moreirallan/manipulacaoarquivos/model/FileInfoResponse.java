@@ -1,28 +1,16 @@
 package br.com.moreirallan.manipulacaoarquivos.model;
 
+import java.util.Date;
+
 public class FileInfoResponse {
     private String nomeArquivo;
-    private String caminhoArquivo;
-    private String caminhoRelativo1;
-    private String caminhoRelativo2;
+    private String tipo;
+    private long tamanho;
+    private Date dataModificacao;
+//    private Date dataModificacao;
+    private String path;
     private String extensao;
     private String separadorDiretorio;
-
-    public String getCaminhoRelativo1() {
-        return caminhoRelativo1;
-    }
-
-    public void setCaminhoRelativo1(String caminhoRelativo1) {
-        this.caminhoRelativo1 = caminhoRelativo1;
-    }
-
-    public String getCaminhoRelativo2() {
-        return caminhoRelativo2;
-    }
-
-    public void setCaminhoRelativo2(String caminhoRelativo2) {
-        this.caminhoRelativo2 = caminhoRelativo2;
-    }
 
     public String getNomeArquivo() {
         return nomeArquivo;
@@ -32,12 +20,12 @@ public class FileInfoResponse {
         this.nomeArquivo = nomeArquivo;
     }
 
-    public String getCaminhoArquivo() {
-        return caminhoArquivo;
+    public String getPath() {
+        return path;
     }
 
-    public void setCaminhoArquivo(String caminhoArquivo) {
-        this.caminhoArquivo = caminhoArquivo;
+    public void setPath(String path) {
+        this.path = path;
     }
 
     public String getExtensao() {
@@ -54,5 +42,29 @@ public class FileInfoResponse {
 
     public void setSeparadorDiretorio(String separadorDiretorio) {
         this.separadorDiretorio = separadorDiretorio;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public long getTamanho() {
+        return tamanho;
+    }
+
+    public void setTamanho(long tamanho) {
+        this.tamanho = tamanho;
+    }
+
+    public Date getDataModificacao() {
+        return dataModificacao;
+    }
+
+    public void setDataModificacao(Date dataModificacao) {
+        this.dataModificacao = dataModificacao;
     }
 }

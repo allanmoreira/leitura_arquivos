@@ -9,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("base64")
+@RequestMapping("public/base64")
 public class Base64Controller {
 
     @Autowired
